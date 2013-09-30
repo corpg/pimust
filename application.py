@@ -14,9 +14,9 @@ import socket
 
 # 3 sec buffer
 BUFFER=2048
-AUDIO_DEVICE=/dev/dsp
+AUDIO_DEVICE="/dev/dsp"
 PORT=9000
-SERVER_IP=192.168.0.100
+SERVER_IP="192.168.0.100"
 
 def client(file):
     # open the audio file
@@ -56,5 +56,5 @@ def server():
     while 1:
         c, _ = s.accept()
         print("New connection. Start playing music...")
-        dev.write(c.recv(BUFFER)))
+        while 1: dev.write(c.recv(BUFFER)))
 
